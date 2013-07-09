@@ -6,7 +6,7 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 var file_name = 'index.html'
 var buffer = fs.readFileSync(file_name)
-var message = buffer.toString('utf8', 0, buffer.length)
+var message = buffer.toString('utf-8', 0, buffer.length)
 
 app.get('/', function(request, response) {
   response.send(message);
