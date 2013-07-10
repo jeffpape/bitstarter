@@ -103,10 +103,10 @@ if(require.main == module) {
         .parse(process.argv);
     var checkJson;
     if (program.url != null) {
-	console.log("url option chosen")
+	// console.log("url option chosen")
 	checkHtmlUrl(program.url, program.checks);
     } else if (program.file != null) {
-	console.log("file option chosen")
+	// console.log("file option chosen")
 	checkJson = checkHtmlFile(program.file, program.checks);
 	var outJson = JSON.stringify(checkJson, null, 4);
 	console.log(outJson);
